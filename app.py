@@ -1,13 +1,3 @@
-Aquí tienes una versión mejorada y "arreglada" del código. No tenía errores de sintaxis, pero le he añadido:
-
-1. **Configuración de página** (`st.set_page_config`) para que se vea bien en navegador.
-2. **CSS ligero** para darle un estilo más limpio y espiritual.
-3. **Estado de sesión** (`st.session_state`) para que los globos (`st.balloons()`) no se repitan en cada recarga.
-4. **Texto del versículo y oración corta** para cada emoción (no solo la referencia).
-5. **Botón "Limpiar"** para empezar de nuevo.
-6. **Aviso importante**: recuerda que esta herramienta acompaña espiritualmente, pero no reemplaza ayuda profesional de salud mental (psicología/medicina), tal como sugieren las guías bíblicas consultadas.
-
-```python
 import streamlit as st
 
 # ======================
@@ -190,16 +180,3 @@ st.markdown("""
 ⚠️ <b>Aviso importante:</b> Este botiquín espiritual es una herramienta de acompañamiento y oración. No reemplaza el consejo médico, psicológico ni psiquiátrico. Si sientes tristeza persistente, ansiedad abrumadora, pensamientos de autolesión o estás en crisis, busca ayuda profesional hoy mismo y habla con una persona de confianza. Pedir ayuda es un acto de cuidado y valentía.
 </div>
 """, unsafe_allow_html=True)
-```
-
-### Principales cambios
-| Cambio | ¿Por qué? |
-|--------|-----------|
-| `index=None` y `placeholder` | El usuario debe elegir activamente una emoción en lugar de que se preselecione la primera. |
-| `st.session_state` | Evita que `st.balloons()` se dispare en cada interacción de Streamlit (recarga). |
-| Texto del versículo + oración | No solo das la referencia, sino un fragmento del pasaje y una oración breve para aplicar. |
-| CSS `.card` | Destaca visualmente el resultado y separa el contenido del resto de la app. |
-| Botón "Limpiar" | Permite resetear la selección sin recargar la página manualmente. |
-| Disclaimer | Nota ética importante: el apoyo espiritual no sustituye la ayuda profesional de salud mental. |
-
-Puedes copiar y pegar este código directamente en tu archivo `.py` y ejecutarlo con `streamlit run nombre_archivo.py`.
